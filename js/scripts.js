@@ -1,3 +1,7 @@
-var pigLatin = function() {
-  return false;
-}
+
+var word = function(word) {
+  var vowels = ['a', 'e', 'i', 'o', 'u'];
+  if(word === vowels[0]) {
+    return true;
+  }
+};
