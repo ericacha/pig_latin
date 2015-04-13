@@ -8,8 +8,9 @@ var arrayLetters = word.split('');
 var arrayfirstLetter = word.slice(0,1);
 //slice only the first letter and return the rest of the word ex) Hat, return 'at'
 var arraywithoutFirstLetter = word.slice(1);
-var arraywithoutTwoLetters = word.slice(2);
 
+//array and new variable for if word begins with 'qu' to go at the end
+var arraywithoutTwoLetters = word.slice(2);
 var qu = ['q','u'];
 var stringqU = "qu";
 
