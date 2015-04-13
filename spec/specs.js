@@ -8,4 +8,7 @@ describe('scrabble', function() {
   it('for letters that start with i,o,u vowel, add ay', function() {
     expect(scrabble('i')).to.equal('iay');
   });
+  it('for letters that start with b consonant ,add ay', function() {
+    expect(scrabble('b')).to.equal('bay');
+  });
 });
