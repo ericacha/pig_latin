@@ -11,4 +11,7 @@ describe('scrabble', function() {
   it('for letters that start with b consonant ,add ay', function() {
     expect(scrabble('b')).to.equal('bay');
   });
+  it('for word starts is cat, move letter c to the end of the word', function() {
+    expect(scrabble('cat')).to.equal('atcay');
+  });
 });
