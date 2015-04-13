@@ -1,4 +1,4 @@
-var scrabble = function(word) {
+var pigLatin = function(word) {
 
 var pig_latin = "";
 
@@ -21,9 +21,9 @@ var vowels = ['a','e','i', 'o', 'u'];
       pig_latin = word + "ay";
       //therefore the rest of the letters are consonants
       //create array to compare the position of 'q' and 'u'
-      //create new string to add to the word without the first two letters 
+      //create new string to add to the word without the first two letters
     } else if ((arrayLetters[0] === qu[0]) && (arrayLetters[1] === qu[1])) {
-      pig_latin = arraywithoutTwoLetters + qu + "ay";
+      pig_latin = arraywithoutTwoLetters + stringqU + "ay";
     }
     //add two arrays together with just single first letter and word without the first letter together
     else {
@@ -34,3 +34,17 @@ var vowels = ['a','e','i', 'o', 'u'];
 return pig_latin;
 
 };
+
+
+$(document).ready(function() {
+  $("form#pig-latin").submit(function(event) {
+    var word = ($("input#word").val());
+    var result = pigLatin(word);
+
+    $(".word").text(result);
+
+
+    $("#result").show();
+    event.preventDefault();
+  });
+});
